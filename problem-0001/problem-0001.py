@@ -7,10 +7,8 @@
 # Find the sum of all multiples of 3 or 5 below 1000.
 
 def findMultiples(number, maximum):
-	multiples = []
-	for i in range(1, maximum):
-		if i % number == 0:
-			multiples.append(i)
+	number_list = range(1,maximum)
+	multiples = list(filter(lambda x: x % number == 0,number_list))
 	return multiples
 
 
